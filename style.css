@@ -74,6 +74,7 @@ p a:hover {
 	text-decoration: none;
 	letter-spacing: 1px;
 	margin: 10px;
+	font-weight: 600;
 }
 
 .primary-btn:hover {
@@ -183,6 +184,65 @@ p a:hover {
 	background-color: var(--accent-color);
 	padding: 9px 36px 6px 14px;
 	border-radius: 47% 53% 80% 20% / 51% 26% 74% 49%;
+}
+
+.podcast {
+	border: var(--secondary-color) solid 10px;
+	border-bottom: none;
+	padding: 80px;
+}
+
+.podcast .episodes {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	margin-bottom: 40px;
+}
+
+.podcast .episodes iframe {
+	flex: 1 0 calc(50% - 40px);
+}
+
+.podcast .podcast-links {
+	text-align: center;
+}
+
+.podcast .podcast-links p {
+	margin-bottom: 30px;
+}
+
+.podcast .podcast-links a i {
+	padding-right: 4px;
+}
+
+.podcast .podcast-links a.spotify {
+	background-color: #1ed760;
+	border: #1ed760 solid 1px;
+	color: var(--text-color);
+}
+
+.podcast .podcast-links a.spotify:hover {
+	background-color: var(--background-color);
+	border: #1ed760 solid 1px;
+}
+
+.podcast .podcast-links a.spotify:hover i {
+	color: #1ed760;
+}
+
+.podcast .podcast-links a.youtube {
+	background-color: #ff0000;
+	border: #ff0000 solid 1px;
+}
+
+.podcast .podcast-links a.youtube:hover {
+	background-color: var(--background-color);
+	border: #ff0000 solid 1px;
+	color: var(--text-color);
+}
+
+.podcast .podcast-links a.youtube:hover i {
+	color: #ff0000;
 }
 
 @media (max-width: 836px) {
