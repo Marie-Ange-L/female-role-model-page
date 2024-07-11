@@ -29,7 +29,7 @@ body {
 	height: 100vh;
 	max-height: 756px;
 	background: url("/img/Mel-Robbins-hero-banner.png") no-repeat top left;
-	background-size: 100%;
+	background-size: 1366px auto;
 	border-right: var(--accent-color) solid 10px;
 	border-left: var(--accent-color) solid 10px;
 	display: flex;
@@ -38,7 +38,7 @@ body {
 }
 
 .hero-content {
-	margin-left: 400px;
+	margin: 100px 0 0 400px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -83,13 +83,7 @@ a.primary-btn:hover {
 	border: var(--accent-color) 1px solid;
 }
 
-@media (max-width: 1366px) {
-	.hero {
-		background-size: auto 100%;
-	}
-}
-
-@media (max-width: 788px) {
+@media (max-width: 836px) {
 	.hero {
 		height: 100vh;
 		align-items: end;
