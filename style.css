@@ -20,9 +20,93 @@ body {
 	color: var(--text-color);
 }
 
+h1 {
+	color: var(--background-color);
+	font-family: "Poppins", sans-serif;
+	font-size: 42px;
+	text-shadow: 2px 2px 4px var(--shadow-color);
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-weight: 800;
+	font-size: 30px;
+	font-variant: small-caps;
+	margin-top: 0;
+}
+
+h3 {
+	font-weight: 800;
+	font-size: 22px;
+	margin-bottom: 6px;
+	font-variant: small-caps;
+}
+
+p {
+	line-height: 1.6rem;
+}
+
+p a {
+	color: var(--accent-color);
+	text-decoration: none;
+}
+
+p a:hover {
+	text-decoration: underline;
+}
+
+.yellow-highlight {
+	color: var(--primary-color);
+}
+
+.green-highlight {
+	color: var(--secondary-color);
+}
+
+.primary-btn {
+	background-color: var(--accent-color);
+	padding: 12px 18px;
+	border-radius: 50px;
+	box-shadow: 2px 2px 4px var(--shadow-color);
+	cursor: pointer;
+	color: var(--background-color);
+	border: var(--accent-color) 1px solid;
+	text-decoration: none;
+	letter-spacing: 1px;
+	margin: 10px;
+}
+
+.primary-btn:hover {
+	background-color: var(--background-color);
+	color: var(--accent-color);
+	border: var(--accent-color) 1px solid;
+}
+
+.secondary-btn {
+	cursor: pointer;
+	color: var(--text-color);
+	text-decoration: none;
+	letter-spacing: 1px;
+	border-bottom: var(--primary-color) 5px solid;
+	padding: 0 5px;
+	font-weight: 700;
+}
+
+.secondary-btn:hover {
+	letter-spacing: normal;
+}
+
+.secondary-btn:hover::before {
+	content: "▶";
+	background-color: var(--primary-color);
+	padding: 3px 5px 3px 8px;
+	margin: 0 5px 0 -5px;
+}
+
 .container {
 	max-width: 1366px;
 	margin: 0 auto;
+	background-color: rgb(254, 255, 253, 0.6);
 }
 
 .hero {
@@ -45,42 +129,60 @@ body {
 	gap: 10px;
 }
 
-h1 {
-	color: var(--background-color);
-	font-family: "Poppins", sans-serif;
-	font-size: 42px;
-	text-shadow: 2px 2px 4px var(--shadow-color);
-	margin-bottom: 20px;
+.intro {
+	border: var(--primary-color) solid 10px;
+	border-bottom: none;
+	padding: 80px;
 }
 
-.yellow-highlight {
-	color: var(--primary-color);
+.intro-content {
+	display: flex;
+	gap: 60px;
 }
 
-.green-highlight {
-	color: var(--secondary-color);
+.intro-content .intro-bio .btn-container {
+	text-align: right;
 }
 
-.primary-btn {
+.intro-content .intro-portrait {
+	clip-path: ellipse(45% 40% at 50% 40%);
+	max-height: 450px;
+}
+
+.intro-content .intro-portrait img {
+	max-width: 300px;
+}
+
+.intro-details {
+	display: flex;
+	gap: 60px;
+}
+
+.intro-details div {
+	flex: 1;
+}
+
+.intro-details h3 {
+	background-color: #ab2727;
+	display: inline-block;
+}
+
+.intro-details h3.journey {
+	background-color: var(--secondary-color);
+	padding: 8px 17px 7px 14px;
+	border-radius: 20% 80% 45% 55% / 51% 56% 44% 49%;
+}
+
+.intro-details h3.five-second-rule {
+	background-color: var(--primary-color);
+	padding: 5px 18px 6px 17px;
+	border-radius: 35% 65% 28% 72% / 51% 54% 46% 49%;
+}
+
+.intro-details h3.impact {
 	background-color: var(--accent-color);
-	padding: 12px 18px;
-	border-radius: 50px;
-	box-shadow: 2px 2px 4px var(--shadow-color);
-}
-
-a.primary-btn {
-	cursor: pointer;
-	color: var(--background-color);
-	border: var(--accent-color) 1px solid;
-	text-decoration: none;
-	letter-spacing: 1px;
-	margin: 10px;
-}
-
-a.primary-btn:hover {
-	background-color: var(--background-color);
-	color: var(--accent-color);
-	border: var(--accent-color) 1px solid;
+	padding: 9px 36px 6px 14px;
+	border-radius: 47% 53% 80% 20% / 51% 26% 74% 49%;
 }
 
 @media (max-width: 836px) {
@@ -93,6 +195,21 @@ a.primary-btn:hover {
 		margin: 0;
 		text-align: center;
 		margin-bottom: 40px;
+	}
+
+	.intro {
+		padding: 30px;
+	}
+
+	.intro-content {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 30px;
+	}
+
+	.intro-details {
+		flex-direction: column;
+		gap: 30px;
 	}
 }
 
