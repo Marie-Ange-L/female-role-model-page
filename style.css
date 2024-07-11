@@ -27,12 +27,88 @@ body {
 
 .hero {
 	height: 100vh;
-	background: url("/img/Mel-Robbins-hero-banner.png") no-repeat center left;
-	background-size: auto 100%;
+	max-height: 756px;
+	background: url("/img/Mel-Robbins-hero-banner.png") no-repeat top left;
+	background-size: 100%;
+	border-right: var(--accent-color) solid 10px;
+	border-left: var(--accent-color) solid 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero-content {
+	margin-left: 400px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+
+h1 {
+	color: var(--background-color);
+	font-family: "Poppins", sans-serif;
+	font-size: 42px;
+	text-shadow: 2px 2px 4px var(--shadow-color);
+	margin-bottom: 20px;
+}
+
+.yellow-highlight {
+	color: var(--primary-color);
+}
+
+.green-highlight {
+	color: var(--secondary-color);
+}
+
+.primary-btn {
+	background-color: var(--accent-color);
+	padding: 12px 18px;
+	border-radius: 50px;
+	box-shadow: 2px 2px 4px var(--shadow-color);
+}
+
+a.primary-btn {
+	cursor: pointer;
+	color: var(--background-color);
+	border: var(--accent-color) 1px solid;
+	text-decoration: none;
+	letter-spacing: 1px;
+	margin: 10px;
+}
+
+a.primary-btn:hover {
+	background-color: var(--background-color);
+	color: var(--accent-color);
+	border: var(--accent-color) 1px solid;
+}
+
+@media (max-width: 1366px) {
+	.hero {
+		background-size: auto 100%;
+	}
+}
+
+@media (max-width: 788px) {
+	.hero {
+		height: 100vh;
+		align-items: end;
+	}
+
+	.hero-content {
+		margin: 0;
+		text-align: center;
+		margin-bottom: 40px;
+	}
 }
 
 @media (max-width: 576px) {
-	.hero {
-		margin-left: -20px;
+	h1 {
+		font-size: 32px;
+		margin: 26px 10px;
+	}
+
+	a.primary-btn {
+		font-size: 16px;
 	}
 }
