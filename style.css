@@ -11,6 +11,10 @@
 	--background-pattern: url("data:image/svg+xml,%3Csvg width='104' height='52' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d5d5d5' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -297,7 +301,7 @@ p a:hover {
 
 .social {
 	background: url("/img/mel-robbins-approved-photo-02.jpg") no-repeat center top;
-	background-size: 100%;
+	background-size: 1366px auto;
 	border: var(--text-color) solid 10px;
 	border-bottom: none;
 }
@@ -345,6 +349,32 @@ p a:hover {
 	opacity: 1;
 }
 
+.disclaimer {
+	background-color: var(--text-color);
+	color: var(--background-color);
+}
+
+.disclaimer h3 {
+	color: var(--text-color);
+}
+
+.disclaimer a {
+	color: var(--background-color);
+}
+
+.disclaimer a:hover {
+	color: var(--text-color);
+}
+
+.disclaimer small a {
+	text-underline-offset: 2px;
+}
+
+.disclaimer small a:hover {
+	color: var(--background-color);
+	text-decoration: none;
+}
+
 @media (max-width: 836px) {
 	.hero {
 		height: 100vh;
@@ -384,7 +414,7 @@ p a:hover {
 		font-size: 30px;
 		flex: 1 1 50%;
 		max-width: 50%;
-		height: 150px;
+		/* height: 150px; */
 	}
 
 	.social-media-container {
@@ -422,6 +452,9 @@ p a:hover {
 		font-size: 12px;
 	}
 
+	.social {
+		background-size: 100% auto;
+	}
 	.social-media {
 		font-size: 20px;
 		height: 100px;
