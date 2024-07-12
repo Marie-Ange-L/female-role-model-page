@@ -101,11 +101,12 @@ p a:hover {
 	box-shadow: 2px 2px 4px var(--shadow-color);
 	cursor: pointer;
 	color: var(--background-color);
-
+	text-align: center;
 	text-decoration: none;
 	letter-spacing: 1px;
 	margin: 10px;
 	font-weight: 600;
+	transition: background-color 0.3s ease;
 }
 
 .primary-btn:hover {
@@ -178,7 +179,7 @@ p a:hover {
 
 .intro-content .intro-bio .btn-container {
 	text-align: right;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
 
 .intro-content .intro-portrait {
@@ -279,7 +280,7 @@ p a:hover {
 	background-color: var(--background-color);
 	padding: 60px;
 	border-radius: 12px;
-	box-shadow: 4px 4px 8px 1px var(--shadow-color);
+	box-shadow: 4px 4px 12px 1px var(--shadow-color);
 }
 
 .book img {
@@ -288,15 +289,26 @@ p a:hover {
 }
 
 .book ul {
-	width: 100%;
 	margin-top: 0;
-	padding-right: 30px;
+	padding-left: 20px;
 	font-size: 14px;
+	list-style: none;
 }
 
-.book ul li::marker {
-	color: var(--accent-color);
-	font-size: 20px;
+.book ul li {
+	padding: 4px 0;
+}
+
+ul li::before {
+	content: "✓";
+	background-color: var(--accent-color);
+	color: var(--background-color);
+	font-size: 14px;
+	font-weight: 800;
+	padding: 0 4px;
+	border-radius: 50%;
+	margin-right: 8px;
+	margin-left: -28px;
 }
 
 .social {
@@ -310,11 +322,11 @@ p a:hover {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	margin-top: 170px;
+	margin-top: 190px;
 }
 
 .social-media {
-	height: 300px;
+	height: 250px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
