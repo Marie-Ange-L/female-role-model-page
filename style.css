@@ -286,12 +286,63 @@ p a:hover {
 .book ul {
 	width: 100%;
 	margin-top: 0;
+	padding-right: 30px;
 	font-size: 14px;
 }
 
 .book ul li::marker {
 	color: var(--accent-color);
 	font-size: 20px;
+}
+
+.social {
+	background: url("/img/mel-robbins-approved-photo-02.jpg") no-repeat center top;
+	background-size: 100%;
+	border: var(--text-color) solid 10px;
+	border-bottom: none;
+}
+
+.social-media-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-top: 170px;
+}
+
+.social-media {
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex: 1 1 25%;
+	gap: 10px;
+	color: var(--text-color);
+	text-decoration: none;
+	font-size: 40px;
+	opacity: 0.8;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-media.instagram {
+	background: url(img/blob1.svg) no-repeat center;
+}
+
+.social-media.tiktok {
+	background: url(img/blob2.svg) no-repeat center;
+}
+
+.social-media.x-twitter {
+	background: url(img/blob3.svg) no-repeat center;
+}
+
+.social-media.facebook {
+	background: url(img/blob4.svg) no-repeat center;
+}
+
+.social-media:hover {
+	transform: scale(1.2);
+	opacity: 1;
 }
 
 @media (max-width: 836px) {
@@ -328,6 +379,17 @@ p a:hover {
 	.book {
 		padding: 30px;
 	}
+
+	.social-media {
+		font-size: 30px;
+		flex: 1 1 50%;
+		max-width: 50%;
+		height: 150px;
+	}
+
+	.social-media-container {
+		margin-top: 20px;
+	}
 }
 
 @media (max-width: 576px) {
@@ -336,7 +398,33 @@ p a:hover {
 		margin: 26px 10px;
 	}
 
+	h2 {
+		font-size: 20px;
+	}
+
+	h3 {
+		font-size: 18px;
+	}
+
+	p {
+		font-size: 14px;
+	}
+
 	a.primary-btn {
-		font-size: 16px;
+		font-size: 14px;
+	}
+
+	a.secondary-btn {
+		font-size: 14px;
+	}
+
+	.book ul {
+		font-size: 12px;
+	}
+
+	.social-media {
+		font-size: 20px;
+		height: 100px;
+		flex: 1 1 25%;
 	}
 }
